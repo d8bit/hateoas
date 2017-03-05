@@ -33,5 +33,16 @@ class UserController extends BaseController
         return \Response::json($cars);
     }
 
+    public function delete($user_id)
+    {
+        try {
+            $user = \App\User::findOrFail($user_id);
+            $res = $user->delete();
+            return \Response::json($res);
+        } catch (\Exception $e) {
+            return \Response::json($e->getMessage(), 400);
+        }
+    }
+
 
 }

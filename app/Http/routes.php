@@ -15,6 +15,7 @@
 Route::get('users', 'UserController@index');
 Route::get('users/{id}', 'UserController@info');
 Route::get('users/{id}/cars', 'UserController@cars');
+Route::get('users/{id}/delete', 'UserController@delete');
 
 // Cars
 Route::get('cars', 'CarController@index');

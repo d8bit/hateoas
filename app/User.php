@@ -35,8 +35,8 @@ class User extends Authenticatable
     {
         return [
             'self' => \URL::to('/users/'.$this->id),
-            'parent' => \URL::to("/users"),
-            'cars' => \URL::to('/users/'.$this->id.'/cars')
+            'cars' => \URL::to('/users/'.$this->id.'/cars'),
+            'delete' => \URL::to("/users/".$this->id."/delete")
         ];
     }
 
