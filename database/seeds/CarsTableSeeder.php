@@ -11,7 +11,7 @@ class CarsTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i < 5; $i++) {
+        for ($i = 1; $i < 200; $i++) {
             DB::table('cars')->insert([
                 'registration_number' => str_random(10),
                 'fk_user' => $i
