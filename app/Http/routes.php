@@ -20,3 +20,4 @@ Route::get('users/{id}/delete', 'UserController@delete');
 // Cars
 Route::get('cars', 'CarController@index');
 Route::get('cars/{id}', 'CarController@info');
+Route::get('cars/{id}/delete', 'CarController@delete');

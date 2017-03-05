@@ -27,5 +27,15 @@ class CarController extends BaseController
         }
     }
 
+    public function delete($car_id)
+    {
+        try {
+            $car = \App\Models\Car::findOrFail($car_id);
+            $res = $car->delete();
+            return \Response::json($res);
+        } catch (\Exception $e) {
+            return \Response::json($e->getMessage(), 400);
+        }
+    }
 
 }
