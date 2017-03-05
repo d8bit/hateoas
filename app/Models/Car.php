@@ -12,6 +12,7 @@ class Car extends Model
     {
         return [
             'self' => \URL::to('/cars/'.$this->id),
+            'parent' => \URL::to('/cars'),
             'user' => \URL::to('/users/'.$this->fk_user)
         ];
     }
