@@ -23,7 +23,7 @@ class UserController extends BaseController
             $user = \App\User::with('Cars')->findOrFail($user_id);
             return \Response::json($user);
         } catch (\Exception $e) {
-            return \Response::json('User not found', 404);
+            return \Response::json('User not found', 400);
         }
     }
 

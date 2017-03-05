@@ -23,7 +23,7 @@ class CarController extends BaseController
             $car = \App\Models\Car::findOrFail($car_id);
             return \Response::json($car);
         } catch (\Exception $e) {
-            return \Response::json('Car not found', 404);
+            return \Response::json('Car not found', 400);
         }
     }
 
